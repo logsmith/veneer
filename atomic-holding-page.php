@@ -15,10 +15,12 @@ function logsmith_veneer() {
 	if ( $pagenow !== 'wp-login.php' && ! current_user_can( 'manage_options' ) && ! is_admin() ) {
 		header( $_SERVER["SERVER_PROTOCOL"] . ' 503 Service Temporarily Unavailable', true, 503 );
 		header( 'Content-Type: text/html; charset=utf-8' );
-		if ( file_exists( get_template_directory() . '/tpl.holding-page.php' ) ) {
-			require_once( get_template_directory() . '/tpl.holding-page.php' );
+		if ( file_exists( get_template_directory() . '/veneer.php' ) ) {
+			require_once( get_template_directory() . '/veneer.php' );
+		}else if ( file_exists( get_template_directory() . '/templates/veneer.php' ) ) {
+			require_once( get_template_directory() . '/templates/veneer.php' );
 		}else{
-			require_once( plugin_dir_path( __FILE__ ) . 'tpl.holding-page.php' );
+			require_once( plugin_dir_path( __FILE__ ) . 'veneer.php' );
 		}
 		die();
 	}

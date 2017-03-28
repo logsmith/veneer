@@ -1,0 +1,19 @@
+{
+  "name": "logsmith/veneer",
+  "description": "Logsmith - Veneer",
+  "keywords": ["wordpress", "plugin", "Veneer"],
+  "homepage": "http://www.atomicsmash.co.uk/",
+  "license": "This software is NOT to be distributed, but can be INCLUDED in WP themes: Premium or Contracted.",
+  "authors": [
+    {
+      "name": "David Darke",
+      "email": "mail@atomicsmash.co.uk",
+      "homepage": "http://www.atomicsmash.co.uk/"
+    }
+  ],
+  "type": "wordpress-plugin",
+  "dist": {
+        "url": "https://github.com/logsmith/veneer.git",
+        "type": "tar"
+    }
+}
